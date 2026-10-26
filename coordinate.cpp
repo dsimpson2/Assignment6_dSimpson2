@@ -128,7 +128,7 @@ void closest_to(Coordinate *list_beginning, float x, float y) // finds the close
 
     float minDistance =
         sqrt(pow(current->x - x, 2) +
-             pow(current->y - y, 2));
+             pow(current->y - y, 2)); // Calculate the initial distance from the first coordinate to the given point (x, y)
 
     current = current->next;
 
@@ -136,7 +136,7 @@ void closest_to(Coordinate *list_beginning, float x, float y) // finds the close
     {
         float distance =
             sqrt(pow(current->x - x, 2) +
-                 pow(current->y - y, 2));
+                 pow(current->y - y, 2)); // Calculate the Euclidean distance from the current coordinate to the given point (x, y)
 
         if(distance < minDistance) // Update the closest coordinate if a closer one is found
         {
